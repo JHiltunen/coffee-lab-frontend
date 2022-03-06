@@ -20,7 +20,23 @@ const useMedia = () => {
           }
     };
   
-    return {coffeeArray, loadCoffees};
+    const uploadNewCoffee = async (jsonData) => {
+      try {
+        const options = {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+          body: JSON.stringify(jsonData),
+        };
+        console.log('formSSSS', jsonData);
+        const result = await doFetch(baseUrl + 'coffees', options);
+        return result;
+      } catch (e) {
+        console.log('uploadMedia error', e);
+        throw new Error(e.message);
+      }
+    }
+
+    return {coffeeArray, loadCoffees, uploadNewCoffee};
   };
   
   export {useMedia};
