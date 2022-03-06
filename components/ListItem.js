@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { uploadsUrl } from '../utils/variables';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 const ListItem = ({singleMedia}) => {
   return (
     <TouchableOpacity style={styles.row}>
       <View style={styles.textbox}>
         <Text style={styles.listTitle}>{singleMedia.name}</Text>
+        <Text>{parseInt(singleMedia.weight)} g</Text>
         <Text>{(parseInt(singleMedia.price) / 100)} €</Text>
+        <Text>{parseInt(singleMedia.roast_level)} roast level</Text>
       </View>
     </TouchableOpacity>
   );
@@ -36,6 +37,7 @@ const styles = StyleSheet.create({
   textbox: {
     flex: 2,
     padding: 10,
+    borderWidth: 2, 
   },
 
   listTitle: {
