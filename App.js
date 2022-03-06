@@ -22,7 +22,7 @@ const App = () => {
       <input type="number"
         {...register("weight", {
           valueAsNumber: true,
-        })}
+        })} placeholder="Packet weight in grams"
         />
       
       <input {...register("price", {
