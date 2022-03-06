@@ -4,7 +4,7 @@ import {useMedia} from '../hooks/ApiHooks';
 import {baseUrl} from '../utils/variables';
 import ListItem from './ListItem';
 
-const List = (props) => {
+const List = () => {
   const {coffeeArray} = useMedia();
 
   return (
