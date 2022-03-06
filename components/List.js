@@ -10,6 +10,7 @@ const List = () => {
   return (
     <FlatList
       data={coffeeArray.coffees}
+      inverted={true}
       renderItem={({item}) => <ListItem singleMedia={item} />}
       keyExtractor={(item, index) => index.toString()}
     />

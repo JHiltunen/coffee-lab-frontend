@@ -9,7 +9,10 @@ import {useMedia} from './hooks/ApiHooks'
 const App = () => {
   const {uploadNewCoffee} = useMedia();
   const { register, handleSubmit } = useForm();
-  const onSubmit = async (data) => await uploadNewCoffee(data);
+  const onSubmit = async (data) => {
+    await uploadNewCoffee(data)
+    window.location.reload(false);
+  };
   //const onSubmit = (data) => console.log(data);
   //{...register("weight", {valueAsNumber: true})} placeholder="Packet weight in grams" />*/
   return (
