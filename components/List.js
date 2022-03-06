@@ -1,30 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import {FlatList} from 'react-native';
+import {useMedia} from '../hooks/ApiHooks';
 import {baseUrl} from '../utils/variables';
 import ListItem from './ListItem';
 
 const List = (props) => {
-  const [mediaArray, setMediaArray] = useState([]);
-
-  useEffect(() => {
-    const loadMedia = async () => {
-        const url = baseUrl + 'coffees';
-      try {
-        const response = await fetch(baseUrl + 'coffees/');
-        const json = await response.json();
-        
-        setMediaArray(json);
-      } catch (e) {
-        console.log('Error:', e.message);
-      }
-    };
-    loadMedia();
-  }, []);
-  console.log('List: mediaArray', mediaArray);
+  const {coffeeArray} = useMedia();
 
   return (
     <FlatList
-      data={mediaArray.coffees}
+      data={coffeeArray.coffees}
       renderItem={({item}) => <ListItem singleMedia={item} />}
       keyExtractor={(item, index) => index.toString()}
     />
