@@ -8,7 +8,7 @@ const ListItem = ({singleMedia}) => {
     <TouchableOpacity style={styles.row}>
       <View style={styles.textbox}>
         <Text style={styles.listTitle}>{singleMedia.name}</Text>
-        <Text>{singleMedia.price}</Text>
+        <Text>{(parseInt(singleMedia.price) / 100)} €</Text>
       </View>
     </TouchableOpacity>
   );
