@@ -1,6 +1,6 @@
 # coffee-lab-backend
 
-Frontend for coffee-lab app. Allows you to interact with the coffee-lab-backend.
+Frontend for coffee-lab app. Allows you to interact with the coffee-lab-backend. Build with React Native and Expo.
 
 ## Screenshots
 
