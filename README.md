@@ -2,7 +2,7 @@
 
 Frontend for coffee-lab app. Allows you to interact with the coffee-lab-backend.
 
-## Demo
+## Screenshots
 
 ![Home page](https://user-images.githubusercontent.com/37395957/156986192-8a28243f-a43e-48ec-a257-6a8b8a599216.png)
 
